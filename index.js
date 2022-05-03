@@ -4,12 +4,12 @@ function showImages(){
     axios.get(`https://zip-img-extractor.herokuapp.com/api?url=${url}`).then(res=>{
         console.log(res.data)
         res.data.forEach(img => {
-            document.getElementById("content").innerHTML+=`<img src="${img}"> <br>`
+            document.getElementById("content").innerHTML+=`<img src="${img}"> <br><br>`
         });
     })
     .catch(err=>{
         console.log(err)
-        document.getElementById("content").innerHTML=`<h4>Some Error Occures</h4>${err.response.data}`
+        document.getElementById("content").innerHTML=`<h4>Some Error Occured</h4>${err.response.data}`
     })
 }
 
