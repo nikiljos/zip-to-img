@@ -3,9 +3,16 @@ function showImages(){
     let url=document.getElementById("urlbox").value
     axios.get(`https://zip-img-extractor.herokuapp.com/api?url=${url}`).then(res=>{
         console.log(res.data)
-        res.data.forEach(img => {
-            document.getElementById("content").innerHTML+=`<img src="${img}"> <br><br>`
-        });
+        if(res.data.length>0){
+            res.data.forEach(img => {
+                document.getElementById("content").innerHTML+=`<img src="${img}"> <br><br>`
+            });
+        }
+        else{
+            document.getElementById("content").innerHTML=`<h4>No Images Found in the given ZIP File</h4>`
+        }
+
+        
     })
     .catch(err=>{
         console.log(err)
