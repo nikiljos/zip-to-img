@@ -21,7 +21,6 @@ function showImages(){
 }
 
 function clearData(){
-    console.log("trigger")
     document.getElementById("urlbox").value=""
     document.getElementById("content").innerHTML=""
 }
