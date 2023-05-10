@@ -1,8 +1,11 @@
+const apiUrl = "https://zip-img-api.dev.nikjos.in";
+
 function showImages(){
-    document.getElementById("content").innerHTML=""
+    document.getElementById("content").innerHTML="<h3>Loading...</h3>"
     let url=document.getElementById("urlbox").value
-    axios.get(`https://zip-img-extractor.herokuapp.com/api?url=${url}`).then(res=>{
+    axios.get(`${apiUrl}/api?url=${url}`).then(res=>{
         console.log(res.data)
+        document.getElementById("content").innerHTML = "";
         if(res.data.length>0){
             res.data.forEach(img => {
                 document.getElementById("content").innerHTML+=`<img src="${img}"> <br><br>`

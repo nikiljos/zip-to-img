@@ -4,8 +4,14 @@ body{
 button{
     margin: .5rem;
 }
-img{
-    max-width: 95%;
+#content img{
+    max-width: 95vw;
+    max-height: 70vh;
+}
+
+.head{
+    margin: 20px;
+    margin-bottom: 50px;
 }
 
 .fixedbottom {
@@ -17,4 +23,8 @@ img{
     /*   margin-right: 10px; */
     margin-left: 20px !important;
     width: 4rem;
+}
+
+.fixedbottom img{
+    width: 100%;
 }
