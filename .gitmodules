@@ -1,0 +1,3 @@
+[submodule "zip-image-extractor-api"]
+	path = zip-image-extractor-api
+	url = https://github.com/nikiljos/zip-image-extractor-api
